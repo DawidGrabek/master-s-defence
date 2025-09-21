@@ -760,9 +760,25 @@ class UserViewModel @Inject constructor(
 
 **13. Właściciel stanu UI:** Compose state (remember) - lokalne stany UI jak expanded/selected/loading, krótki lifecycle związany z komponentem.
 
-**14. Warstwa danych:** Repository pattern, data sources (Remote/Local), caching strategy, offline-first, Room database, Retrofit API calls.
+***14. Warstwa danych:
 
-**15. Warstwa domeny:** Use Cases enkapsulujące business logic, platform-independent, pure Kotlin bez Android dependencies, single responsibility per use case.
+Warstwa danych Android: repozytoria udostępniają dane aplikacji i pośredniczą między źródłami (np. baza danych, sieć, cache), ukrywając szczegóły ich implementacji przed resztą systemu. Warstwa ta synchronizuje i przetwarza dane, aby dostarczyć spójne, gotowe do użycia informacje innym warstwom.
+
+Warstwa domeny Android: centralizuje logikę biznesową, operuje na encjach i przypadkach użycia (use cases), nie zna szczegółów technologii ani interfejsu – jest „czysta” i testowalna, przez co ułatwia rozwój i utrzymanie projektu.
+
+***15. Warstwa domeny:
+
+Zawiera logikę biznesową i reguły biznesowe aplikacji niezależnie od wykorzystywanej technologii czy interfejsu.
+
+Skupia encje, obiekty wartości, agregaty i serwisy domenowe, które opisują główny model problemu aplikacji.
+
+Jest „czysta” — nie powinna integrować się bezpośrednio z bazą danych, API, interfejsem użytkownika ani innymi zewnętrznymi systemami.
+
+Udostępnia przypadki użycia (use cases, interaktory), które realizują konkretne operacje na modelu biznesowym, wykorzystywane wielokrotnie przez różne części aplikacji.
+
+Może być wielokrotnie wykorzystywana i testowana niezależnie (przydatne w dużych aplikacjach).
+
+Nie zna szczegółów implementacji innych warstw systemu i nie zależy od frameworków.
 
 ---
 
