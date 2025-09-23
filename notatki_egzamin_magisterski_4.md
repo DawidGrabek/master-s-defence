@@ -1,4 +1,3 @@
----
 
 ## 8. Programowanie full-stack w chmurze obliczeniowej
 
