@@ -41,20 +41,72 @@
 
 ### 5.3. Możliwe architektury hurtowni danych
 
-**Architektura jednopoziomowa:**
-- Bezpośredni dostęp do systemów źródłowych
-- Minimalna transformacja danych
-- Szybka implementacja, ale ograniczona funkcjonalność
+### 1. Architektura scentralizowana (Inmon – Corporate Information Factory)
+- **Opis:** Dane z różnych źródeł trafiają do centralnej hurtowni EDW – Enterprise Data Warehouse.
+- **Cechy:**  
+  - Dane znormalizowane (3NF)
+  - Single source of truth
+  - Z hurtowni budowane są dedykowane Data Marty
+- **Zalety:** spójność danych, kontrola jakości
+- **Wady:** trudna i długa implementacja, mniejsza elastyczność
 
-**Architektura dwupoziomowa:**
-- Warstwa źródeł + warstwa prezentacji
-- ETL między systemami operacyjnymi a hurtownią
-- Standard dla większości implementacji
+---
 
-**Architektura trójpoziomowa:**
-- Warstwa źródeł + warstwa pośrednia (ODS) + warstwa prezentacji
-- ODS (Operational Data Store) dla danych operacyjnych
-- Najlepsza dla złożonych środowisk
+### 2. Architektura zorientowana na Data Marty (Kimball – Bus Architecture)
+- **Opis:** Dane ładowane bezpośrednio do tematycznych Data Martów (np. sprzedaż, marketing, finanse)
+- **Cechy:**  
+  - Podejście bottom-up
+  - Schemat gwiazdy lub płatka śniegu
+  - Data Marty łączą wspólne wymiary ("bus-matrix")
+- **Zalety:** szybkie wdrożenie, łatwa analiza
+- **Wady:** trudności z utrzymaniem spójności w dużych organizacjach
+
+---
+
+### 3. Architektura hybrydowa
+- **Opis:** Kompromis – budowa centralnej EDW i równoległe tworzenie Data Martów dla biznesu
+- **Cechy:** Centralna kontrola + szybkie efekty dla działów biznesowych
+
+---
+
+### 4. Architektura trójwarstwowa (klasyczna)
+- **Warstwa źródłowa:** systemy operacyjne (OLTP), ERP, CRM, pliki, API
+- **Warstwa integracyjna:** staging area, ETL/ELT, hurtownia danych (DWH)
+- **Warstwa prezentacji:** narzędzia BI (OLAP, dashboardy, raporty)
+- **Cechy:** Najpowszechniej stosowana architektura w praktyce
+
+---
+
+### 5. Architektura Data Lake
+- **Opis:** Dane trafiają do centralnego repozytorium w formie surowej, często pół-strukturalne lub niestrukturalne
+- **Technologie:** Hadoop, S3, Data Lake platformy
+- **Zastosowania:** Big data, machine learning, IoT
+- **Zalety:** duża elastyczność, obsługa wielu typów danych
+- **Wady:** brak standaryzacji, ryzyko "data swamp"
+
+---
+
+### 6. Architektura Data Lakehouse (nowoczesna)
+- **Opis:** Połączenie elastyczności Data Lake i spójności, wydajności hurtowni
+- **Technologie:** Delta Lake, Snowflake, BigQuery, Iceberg
+- **Cechy:** Jedna platforma do transakcji, analiz, i ML
+- **Zalety:** niższe koszty, unikanie duplikacji danych
+
+---
+
+### 7. Architektura w chmurze (serverless / cloud-native)
+- **Opis:** Hurtownia jako usługa (DWH-as-a-Service); platformy cloud-native
+- **Przykłady:** BigQuery, Amazon Redshift, Azure Synapse
+- **Zalety:** elastyczne skalowanie, brak zarządzania infrastrukturą
+- **Wady:** zależność od dostawcy, koszt przy dużych wolumenach
+
+---
+
+### 📌 Podsumowanie:
+- **Inmon:** centralizacja i spójność
+- **Kimball:** szybkość wdrożenia, prostota dla użytkownika biznesowego
+- **Hybrydowa:** kompromis
+- **Lake, Lakehouse, Cloud:** elastyczność, wsparcie dla AI/big data, nowoczesne podejście
 
 **Przykład zastosowania:** Bank używa architektury 3-warstwowej: systemy transakcyjne → ODS (dane dzienne) → hurtownia (dane historyczne) → raporty.
 
