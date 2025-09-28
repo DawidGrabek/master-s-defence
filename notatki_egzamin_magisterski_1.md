@@ -266,16 +266,24 @@
 
 ### 3.5. Metoda Blina
 
-**Charakterystyka:** Jedna z metod wielokryterialnego podejmowania decyzji służąca do wyboru rozwiązania ze zbioru Pareto.
+Metoda Blina to technika grupowego podejmowania decyzji, używana przy wyborze najlepszego wariantu w sytuacji wielokryterialnej — czyli wtedy, gdy kilka osób (decydentów) ocenia różne warianty według różnych kryteriów.
 
-**Zasada działania:**
-- Wykorzystuje informacje o preferencjach decydenta
-- Buduje funkcję użyteczności agregującą wszystkie kryteria
-- Znajduje rozwiązanie maksymalizujące tę funkcję
+Najważniejsze cechy metody Blina:
+Każdy decydent porządkuje dostępne warianty według własnych preferencji.
 
-**Zastosowanie:** Gdy decydent może określić swoje preferencje między kryteriami, ale potrzebuje pomocy w znalezieniu optymalnego kompromisu.
+Dla każdej osoby tworzy się macierz preferencji, która pokazuje, które warianty są bardziej preferowane względem innych.
 
-**Przykład:** W planowaniu inwestycji gdzie mamy kryteria: zysk, ryzyko, płynność - metoda Blina pomaga znaleźć portfel optymalny przy danych preferencjach ryzyka.
+Macierze wszystkich decydentów sumuje się, żeby otrzymać macierz sumaryczną — pokazującą społeczne preferencje w grupie.
+
+Na podstawie wyliczonych miar preferencji ustala się, które warianty są akceptowalne społecznie (np. jeśli większość osób preferuje wariant A nad B, to A uznaje się za bardziej pożądany).
+
+Jeśli nie da się wyznaczyć wspólnego, grupowego uporządkowania, to znaczy, że stanowiska decydentów są zbyt rozbieżne.
+
+Przykład:
+Masz 4 warianty i 10 osób grupy. Każda osoba podaje swoją kolejność preferencji (np. a > b > c > d). Tworzysz macierze preferencji dla każdej osoby, sumujesz je i widzisz, które warianty najczęściej są uznawane za najlepsze przez grupę.
+
+Podsumowanie:
+Metoda Blina pozwala przekształcić indywidualne preferencje i porównania wariantów w jeden społeczny ranking. Jest szczególnie użyteczna przy decyzjach zespołowych, gdzie różni ludzie mają różne poglądy — pozwala wyznaczyć wynik, który najlepiej odpowiada intencjom całej grupy.
 
 ---
 
