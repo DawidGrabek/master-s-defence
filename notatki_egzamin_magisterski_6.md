@@ -563,3 +563,194 @@ Zgodność: 23/38 kryteriów AA (60%)
 - **SEO**: lepsza struktura = wyższe pozycje w wyszukiwarkach
 - **UX**: lepsze doświadczenie dla wszystkich użytkowników
 - **Techniczne**: czystszy, bardziej semantyczny kod
+
+### 6. Metody oceny jakości interfejsu – klasyfikacja, typy metod
+
+**Definicja:** Metody oceny jakości interfejsu to zbiór technik i narzędzi służących do analizy użyteczności, dostępności i funkcjonalności interfejsów użytkownika.
+
+**Klasyfikacja metod:**
+
+**Ze względu na udział użytkowników:**
+- **Z udziałem użytkowników**: obserwacja, wywiady, testy zadaniowe, ankiety
+- **Bez udziału użytkowników**: ocena heurystyczna, analiza czynności, wędrówka poznawcza
+
+**Ze względu na zakres:**
+- **Ogólne/całościowe**: ocena heurystyczna, SUS, ogólna satysfakcja
+- **Szczegółowe**: lista kontrolna, GOMS, analiza konkretnych funkcji
+
+**Ze względu na źródło wiedzy:**
+- **Oparte na użytkowniku**: testy użyteczności, obserwacja, wywiady
+- **Oparte na ekspercie**: ocena heurystyczna, przegląd ekspercki
+- **Oparte na teorii**: modele kognitywne, GOMS, KLM
+
+**Ze względu na cel:**
+- **Formatywne**: wspierają proces projektowania, identyfikują problemy
+- **Podsumowujące**: oceniają gotowy produkt, porównują alternatywy
+
+---
+
+### 7. Techniki oceny jakości interfejsów z udziałem i bez udziału użytkowników
+
+**Techniki Z UDZIAŁEM użytkowników:**
+
+**Obserwacja bezpośrednia:**
+- Obserwowanie użytkowników podczas wykonywania zadań
+- Rejestrowanie błędów, czasu wykonania, frustracji
+- Metoda "think aloud" - użytkownicy opisują swoje myśli
+
+**Testy zadaniowe:**
+- Użytkownicy wykonują określone scenariusze
+- Pomiar skuteczności, efektywności, satysfakcji
+- Identyfikacja problemów użyteczności
+
+**Wywiady pogłębione:**
+- Bezpośrednia rozmowa z użytkownikami
+- Poznanie potrzeb, oczekiwań, doświadczeń
+- Zbieranie subiektywnych opinii
+
+**Ankiety i kwestionariusze:**
+- SUS (System Usability Scale), SUPR-Q, UEQ, AttrakDiff
+- Skale Likerta, pytania otwarte
+
+**Techniki BEZ UDZIAŁU użytkowników:**
+
+**Ocena heurystyczna:**
+- Eksperci oceniają zgodność z zasadami użyteczności
+- Heurystyki Nielsena-Molicha
+- Szybka, tania, nie wymaga użytkowników
+
+**Wędrówka poznawcza (Cognitive Walkthrough):**
+- Ekspert symuluje działania użytkownika
+- Skupienie na płynności procesów
+- Analiza sekwencji działań
+
+**Przegląd ekspercki:**
+- Ocena przez specjalistów UX/UI
+- Wykorzystanie wiedzy i doświadczenia
+- Identyfikacja problemów projektowych
+
+---
+
+### 8. Metodyka SUS (System Usability Scale)
+
+**Definicja:** SUS to standardowy 10-pytaniowy kwestionariusz stworzony przez Johna Brooke'a w 1986 roku do szybkiej oceny użyteczności systemów.
+
+**10 pytań SUS:**
+1. Będę często korzystał z tego systemu
+2. System jest niepotrzebnie skomplikowany
+3. System jest łatwy w użyciu
+4. Będę potrzebował wsparcia technicznego
+5. Funkcje systemu są dobrze zintegrowane
+6. W systemie jest zbyt wiele niespójności
+7. Większość ludzi szybko nauczy się systemu
+8. System jest uciążliwy w użyciu
+9. Czuję się pewnie korzystając z systemu
+10. Musiałem się wiele nauczyć przed rozpoczęciem
+
+**Obliczanie wyniku:**
+- Pytania 1,3,5,7,9: odejmij 1 od wyniku
+- Pytania 2,4,6,8,10: odejmij wynik od 5
+- Zsumuj wszystkie punkty i pomnóż przez 2,5
+
+**Interpretacja:**
+- 0-50: bardzo słaba użyteczność
+- 50-68: poniżej średniej (68 punktów to średnia)
+- 68-80: dobra użyteczność
+- 80+: doskonała użyteczność
+
+---
+
+### 9. Ocena heurystyczna – heurystyki Nielsena-Molicha
+
+**Definicja:** 10 podstawowych zasad użyteczności opracowanych w 1990 roku przez Jakoba Nielsena i Rolfa Molicha do szybkiej oceny interfejsów przez ekspertów.
+
+**10 heurystyk Nielsena-Molicha:**
+
+**1. Pokazuj status systemu**
+- Użytkownik zawsze wie co się dzieje
+- Loading indicators, progress bary, informacje zwrotne
+
+**2. Zgodność między systemem a rzeczywistością**
+- Używaj języka użytkownika, konwencji ze świata rzeczywistego
+- Naturalne mapowanie
+
+**3. Kontrola i swoboda użytkownika**
+- Undo/Redo funkcjonalności
+- Możliwość anulowania akcji, wyjścia awaryjne
+
+**4. Spójność i standardy**
+- Jednolite wzorce projektowe
+- Zgodność z konwencjami platformy, konsystentne nazewnictwo
+
+**5. Zapobieganie błędom**
+- Projektowanie eliminujące błędy
+- Walidacja w czasie rzeczywistym, ograniczenia w formularzach
+
+**6. Rozpoznawanie lepsze niż przypominanie**
+- Widoczne opcje i działania
+- Minimalizacja obciążenia pamięci, podpowiedzi
+
+**7. Elastyczność i efektywność**
+- Skróty dla zaawansowanych, personalizacja
+- Różne ścieżki do celu
+
+**8. Estetyka i minimalizm**
+- Tylko istotne informacje
+- Unikanie zbędnego bałaganu, hierarchia wizualna
+
+**9. Rozpoznawanie, diagnoza i naprawa błędów**
+- Zrozumiałe komunikaty błędów
+- Wskazanie przyczyny i rozwiązania
+
+**10. Pomoc i dokumentacja**
+- Dostępna w kontekście, konkretne instrukcje
+- Przeszukiwalna baza wiedzy
+
+---
+
+### 10. Okulografia (Eye-tracking) – idea, istota, urządzenia, eksperyment, rezultaty
+
+**Definicja:** Metoda śledzenia ruchu gałek ocznych pozwalająca obiektywnie badać, gdzie i jak długo użytkownicy patrzą na interfejs.
+
+**Idea i istota:**
+- **Cel**: obiektywne badanie wzorców patrzenia
+- **Podstawa**: rejestracja fiksacji (skupienia wzroku) i sakkad (przeskoków)
+- **Zastosowanie**: optymalizacja interfejsów, badania UX, marketing
+- **Przewaga**: eliminuje założenia, daje obiektywne dane
+
+**Urządzenia eye-tracking:**
+
+**Stacjonarne:**
+- Tobii Pro Spectrum, EyeLink
+- Wysoka precyzja (50-120 Hz), środowisko laboratoryjne
+
+**Mobilne:**
+- Okulary z kamerkami (Tobii Pro Glasses)
+- Badania w naturalnym środowisku, mniejsza precyzja
+
+**Softwarowe:**
+- Webgazer.js, RealEye
+- Wykorzystanie kamery internetowej, badania zdalne
+
+**Przebieg eksperymentu:**
+1. **Przygotowanie**: kalibracja, scenariusze, instrukcje
+2. **Badanie**: wykonywanie zadań, rejestracja ruchu oczu (15-45 min)
+3. **Analiza**: filtrowanie danych, mapowanie na interfejs
+
+**Rezultaty:**
+
+**Mapy ciepła (Heat Maps):**
+- Kolory pokazują intensywność patrzenia
+- Czerwony = najczęściej oglądane, niebieski = rzadko
+
+**Ścieżki wzroku (Gaze Plots):**
+- Punkty = fiksacje, linie = sakkady
+- Numery = kolejność patrzenia
+
+**Metryki:**
+- Czas do pierwszej fiksacji
+- Całkowity czas patrzenia
+- Liczba fiksacji na obszar
+- Obszary pomijane (blind spots)
+
+**Zastosowania:** optymalizacja layoutów, testowanie reklam, analiza nawigacji, badanie dostępności
